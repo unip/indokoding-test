@@ -1,0 +1,115 @@
+a.slink {
+  color: #212529; }
+  a.slink:hover {
+    color: #a2aa2f; }
+
+.btn {
+  border-radius: 2px; }
+
+.btn-primary {
+  background-color: #b5be34;
+  border-color: #b5be34; }
+  .btn-primary:hover {
+    background-color: #a2aa2f;
+    border-color: #a2aa2f; }
+
+.btn-secondary {
+  background-color: #382d2b;
+  border-color: #382d2b; }
+  .btn-secondary:hover {
+    background-color: #2a2120;
+    border-color: #2a2120; }
+
+.form-control {
+  border-radius: 2px; }
+
+a {
+  color: #b5be34; }
+  a:hover {
+    color: #a2aa2f; }
+
+body {
+  color: #212529;
+  background-color: #e9ebf0; }
+
+#top, #title, #header {
+  background-color: white; }
+
+#top {
+  font-size: 0.8rem; }
+  #top li {
+    margin: 0 1rem; }
+
+#title .search input {
+  background-color: #e9ebf0;
+  border-color: #e9ebf0; }
+  #title .search input:focus {
+    box-shadow: none; }
+
+#menu {
+  background-color: #382d2b;
+  font-size: 1.2rem; }
+  #menu a {
+    color: white;
+    flex-grow: 1; }
+    #menu a:hover {
+      text-decoration: none; }
+  #menu .categories {
+    background-color: #2a2120; }
+    #menu .categories:hover {
+      background-color: #a2aa2f; }
+  #menu ul {
+    flex-grow: 1; }
+    #menu ul li {
+      display: flex;
+      flex-grow: 1;
+      align-items: stretch; }
+      #menu ul li a:hover {
+        background-color: #b5be34; }
+
+#header #promo .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #382d2b; }
+  #header #promo .carousel-indicators li.active {
+    background-color: #b5be34; }
+  #header #promo .carousel-indicators li:hover {
+    cursor: pointer; }
+#header #promo .promo-item {
+  height: 400px;
+  background-image: url(../images/fresh-beef.jpeg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 60%; }
+  #header #promo .promo-item .title {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 10%; }
+#header #promo .carousel-control-next,
+#header #promo .carousel-control-prev {
+  width: auto;
+  background-color: #4f5871;
+  top: auto;
+  bottom: auto;
+  align-self: center; }
+
+#top-products .category {
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center; }
+  #top-products .category div {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px; }
+
+/*# sourceMappingURL=style.css.map */

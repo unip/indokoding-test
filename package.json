@@ -1,0 +1,10 @@
+{
+  "name": "indokoding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Abdurrahman Al Hanif <zen.vuitton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
+}

@@ -1,0 +1,186 @@
+$color-primary     : #b5be34;
+$color-primary-dark: darken($color-primary, 5%);
+$color-accent      : #382d2b;
+$color-accent-dark : darken($color-accent, 5%);
+$color-dark        : #262f40;
+$color-text        : #212529;
+$color-grey        : #dadde5;
+$color-grey-light  : lighten($color-grey, 5%);
+
+$rounded-corner    : 2px;
+
+a.slink {
+  color: $color-text;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+.btn {
+  border-radius: $rounded-corner;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    border-color: $color-primary-dark;
+  }
+}
+
+.btn-secondary {
+  background-color: $color-accent;
+  border-color: $color-accent;
+
+  &:hover {
+    background-color: $color-accent-dark;
+    border-color: $color-accent-dark;
+  }
+}
+
+.form-control {
+  border-radius: $rounded-corner;
+}
+
+a {
+  color: $color-primary;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+body {
+  color: $color-text;
+  background-color: $color-grey-light;
+}
+
+#top, #title, #header {
+  background-color: white;
+}
+
+#top {
+  font-size: 0.8rem;
+
+  li {
+    margin: 0 1rem;
+  }
+}
+
+#title {
+  .search {
+    input {
+      background-color: $color-grey-light;
+      border-color: $color-grey-light;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+#menu {
+  background-color: $color-accent;
+  font-size: 1.2rem;
+
+  a {
+    color: white;
+    flex-grow: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .categories {
+    background-color: $color-accent-dark;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  ul {
+    flex-grow: 1;
+
+    li {
+      display: flex;
+      flex-grow: 1;
+      align-items: stretch;
+
+      a:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+#header {
+
+  #promo {
+    .carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: $color-accent;
+
+      &.active {
+        background-color: $color-primary;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .promo-item {
+      height: 400px;
+      background-image: url(../images/fresh-beef.jpeg);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 60%;
+
+      .title {
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 10%;
+      }
+    }
+
+    .carousel-control-next, 
+    .carousel-control-prev {
+      width: auto;
+      background-color: darken($color-grey, 50%);
+      top: auto;
+      bottom: auto;
+      align-self: center;
+    }
+  }
+}
+
+#top-products {
+  .category {
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: $rounded-corner;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+  }
+}

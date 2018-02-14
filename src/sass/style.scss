@@ -3,17 +3,25 @@ $color-primary-dark: darken($color-primary, 5%);
 $color-accent      : #382d2b;
 $color-accent-dark : darken($color-accent, 5%);
 $color-dark        : #262f40;
+$color-darker      : #212938;
 $color-text        : #212529;
 $color-grey        : #dadde5;
 $color-grey-light  : lighten($color-grey, 5%);
+$color-grey-dark   : darken($color-grey, 5%);
 
-$rounded-corner    : 2px;
+$rounded-corner    : 3px;
+$transition        : all .15s ease;
 
-a.slink {
+.text-primary {
+  color: $color-primary !important;
+}
+
+.slink {
   color: $color-text;
 
   &:hover {
     color: $color-primary-dark;
+    text-decoration: none;
   }
 }
 
@@ -21,11 +29,18 @@ a.slink {
   border-radius: $rounded-corner;
 }
 
+input.form-control:focus, 
+.btn-primary:focus, 
+.btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba($color-primary,.5);
+}
+
 .btn-primary {
   background-color: $color-primary;
   border-color: $color-primary;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-primary-dark;
     border-color: $color-primary-dark;
   }
@@ -45,12 +60,89 @@ a.slink {
   border-radius: $rounded-corner;
 }
 
+.ease {
+  transition: $transition;
+}
+
+.badge {
+  color: white;
+  width: 60px;
+  padding: 0;
+  line-height: 60px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  background-color: $color-primary;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.price {
+  color: red;
+
+  s {
+    color: lighten(black, 50%);
+    font-size: 0.9rem;
+  }
+}
+
+.box {
+  min-height: 300px;
+  padding: 0;
+  background-color: white;
+  border-radius: $rounded-corner;
+  border: 2px solid $color-grey-dark;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  .card-header {
+    background-color: $color-grey-dark;
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .card-body {
+    min-height: 100px;
+
+    .stars {
+      color: $color-grey;
+    }
+  }
+}
+
+.lSSlideWrapper {
+  position: unset;
+  
+  .lSPrev, .lSNext {
+    color: white !important;
+    min-width: 32px;
+    background-color: $color-primary;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lSPrev {left:0;}
+  .lSNext {right:0;}
+}
+.lSPager {
+  display: none;
+}
+
 a {
   color: $color-primary;
 
   &:hover {
     color: $color-primary-dark;
   }
+}
+
+h3 {
+  margin-bottom: 0;
 }
 
 body {
@@ -155,6 +247,11 @@ body {
         justify-content: center;
         align-items: start;
         margin-left: 10%;
+
+        button:hover {
+          background-color: $color-primary-dark;
+          border-color: $color-primary-dark;
+        }
       }
     }
 
@@ -174,13 +271,206 @@ body {
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     border-radius: $rounded-corner;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
 
     div {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba($color-accent, 0.7);
       border-radius: 5px;
+
+      span {
+        color: white;
+        font-size: 1rem;
+        padding: 15px 35px;
+        margin: 10px;
+        display: block;
+        border: 1px solid white;
+        border-radius: $rounded-corner;
+      }
+    }
+  }
+
+  .category:hover {
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    div {
+      background-color: rgba($color-accent, 0.3);
+
+      span {
+        color: $color-accent;
+        margin: 15px;
+        background-color: white;
+      }
+    }
+  }
+}
+
+#great-deals {
+  .card-body {
+    height: auto;
+  }
+
+  #deals {
+    li {
+      position: relative;
+
+      .card {
+        border: none;
+        background-color: white;
+        
+        form {
+          display: none;
+        }
+      }
+
+      &:hover {
+        height: 100%;
+
+        .card {
+          width: inherit;
+          border: 1px solid $color-primary;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 100;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          
+          form {
+            display: block;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+#special-offers {
+  .first {
+    min-height: 300px;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 3px 3px;
+
+    h3 {
+      color: white;
+      height: 60px;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      background-color: $color-accent;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .content {
+      flex-grow: 3;
+      background-size: 55% auto;
+      background-position: 90% center;
+      background-repeat: no-repeat;
+      position: relative;
+
+      .title {
+        width: 50%;
+      }
+    }
+
+    .countdown {
+      flex-grow: 1;
+      position: relative;
+
+      p {
+        color: white;
+        background-color: $color-accent;
+        border-radius: $rounded-corner;
+      }
+    }
+  }
+
+  .offer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    a {
+      color: white;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: $rounded-corner;
+
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      h5 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .price-orange {
+      color: orange;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+footer {
+  a {
+    color: rgba(white, 0.5);
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  #subscribe {
+    background-color: $color-dark;
+    
+    .subscribe {
+      input {
+        color: white;
+        font-size: 1rem;
+        background-color: rgba(white, 0.3);
+        border-color: rgba(white, 0.3);
+
+        &::-webkit-input-placeholder {
+          color: rgba(white, 0.5);
+        }
+      }
+    }
+  }
+
+  #links {
+    color: rgba(white, 0.5);
+    background-color: $color-darker;
+
+    h5 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      li {
+        margin-bottom: 1.5rem;
+      }
+    } 
+  }
+
+  #copyright {
+    color: rgba(white, 0.5);
+    background-color: $color-dark;
+
+    p {
+      margin-bottom: 0;
     }
   }
 }

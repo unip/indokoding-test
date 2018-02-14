@@ -1,15 +1,24 @@
-a.slink {
+.text-primary {
+  color: #b5be34 !important; }
+
+.slink {
   color: #212529; }
-  a.slink:hover {
-    color: #a2aa2f; }
+  .slink:hover {
+    color: #a2aa2f;
+    text-decoration: none; }
 
 .btn {
-  border-radius: 2px; }
+  border-radius: 3px; }
+
+input.form-control:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(181, 190, 52, 0.5); }
 
 .btn-primary {
   background-color: #b5be34;
   border-color: #b5be34; }
-  .btn-primary:hover {
+  .btn-primary:hover, .btn-primary:focus {
     background-color: #a2aa2f;
     border-color: #a2aa2f; }
 
@@ -21,12 +30,72 @@ a.slink {
     border-color: #2a2120; }
 
 .form-control {
-  border-radius: 2px; }
+  border-radius: 3px; }
+
+.ease {
+  transition: all 0.15s ease; }
+
+.badge {
+  color: white;
+  width: 60px;
+  padding: 0;
+  line-height: 60px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  background-color: #b5be34;
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
+.price {
+  color: red; }
+  .price s {
+    color: gray;
+    font-size: 0.9rem; }
+
+.box {
+  min-height: 300px;
+  padding: 0;
+  background-color: white;
+  border-radius: 3px;
+  border: 2px solid #cbcfda;
+  display: flex;
+  flex-direction: column; }
+
+.box .card-header {
+  background-color: #cbcfda; }
+  .box .card-header h3 {
+    font-size: 1.4rem; }
+.box .card-body {
+  min-height: 100px; }
+  .box .card-body .stars {
+    color: #dadde5; }
+
+.lSSlideWrapper {
+  position: unset; }
+  .lSSlideWrapper .lSPrev, .lSSlideWrapper .lSNext {
+    color: white !important;
+    min-width: 32px;
+    background-color: #b5be34;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .lSSlideWrapper .lSPrev {
+    left: 0; }
+  .lSSlideWrapper .lSNext {
+    right: 0; }
+
+.lSPager {
+  display: none; }
 
 a {
   color: #b5be34; }
   a:hover {
     color: #a2aa2f; }
+
+h3 {
+  margin-bottom: 0; }
 
 body {
   color: #212529;
@@ -93,6 +162,9 @@ body {
     justify-content: center;
     align-items: start;
     margin-left: 10%; }
+    #header #promo .promo-item .title button:hover {
+      background-color: #a2aa2f;
+      border-color: #a2aa2f; }
 #header #promo .carousel-control-next,
 #header #promo .carousel-control-prev {
   width: auto;
@@ -105,11 +177,131 @@ body {
   height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 2px;
+  background-position: center center;
+  border-radius: 3px;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  box-shadow: none; }
   #top-products .category div {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(56, 45, 43, 0.7);
     border-radius: 5px; }
+    #top-products .category div span {
+      color: white;
+      font-size: 1rem;
+      padding: 15px 35px;
+      margin: 10px;
+      display: block;
+      border: 1px solid white;
+      border-radius: 3px; }
+#top-products .category:hover {
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+  #top-products .category:hover div {
+    background-color: rgba(56, 45, 43, 0.3); }
+    #top-products .category:hover div span {
+      color: #382d2b;
+      margin: 15px;
+      background-color: white; }
+
+#great-deals .card-body {
+  height: auto; }
+#great-deals #deals li {
+  position: relative; }
+  #great-deals #deals li .card {
+    border: none;
+    background-color: white; }
+    #great-deals #deals li .card form {
+      display: none; }
+  #great-deals #deals li:hover {
+    height: 100%; }
+    #great-deals #deals li:hover .card {
+      width: inherit;
+      border: 1px solid #b5be34;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+      #great-deals #deals li:hover .card form {
+        display: block; }
+
+#special-offers .first {
+  min-height: 300px;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 3px 3px; }
+  #special-offers .first h3 {
+    color: white;
+    height: 60px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #382d2b;
+    border-radius: 3px 3px 0 0; }
+  #special-offers .first .content {
+    flex-grow: 3;
+    background-size: 55% auto;
+    background-position: 90% center;
+    background-repeat: no-repeat;
+    position: relative; }
+    #special-offers .first .content .title {
+      width: 50%; }
+  #special-offers .first .countdown {
+    flex-grow: 1;
+    position: relative; }
+    #special-offers .first .countdown p {
+      color: white;
+      background-color: #382d2b;
+      border-radius: 3px; }
+#special-offers .offer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  #special-offers .offer a {
+    color: white;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px; }
+    #special-offers .offer a:hover {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5); }
+    #special-offers .offer a h5 {
+      font-size: 1.4rem; }
+  #special-offers .offer .price-orange {
+    color: orange;
+    font-size: 1.2rem; }
+
+footer a {
+  color: rgba(255, 255, 255, 0.5); }
+  footer a:hover {
+    color: white;
+    text-decoration: none; }
+footer #subscribe {
+  background-color: #262f40; }
+  footer #subscribe .subscribe input {
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3); }
+    footer #subscribe .subscribe input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+footer #links {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #212938; }
+  footer #links h5 {
+    color: white;
+    margin-bottom: 1.5rem; }
+  footer #links ul li {
+    margin-bottom: 1.5rem; }
+footer #copyright {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #262f40; }
+  footer #copyright p {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

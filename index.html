@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/lightslider.css">
     <link rel="stylesheet" href="src/css/style.css">
 
     <!-- Font Awesome CDN -->
@@ -53,21 +54,22 @@
         </div>
       </nav>
 
-      <nav id="menu">
+      <nav id="menu" class="sticky-top">
         <div class="container">
           <div class="row no-gutters">
             <div class="col-md-2 d-flex align-self-stretch align-items-stretch p-0">
-              <a class="categories d-flex p-2 align-items-center justify-content-center" href=""><i class="fas fa-bars"></i>&ensp;All Categories</a>
+              <a class="categories d-flex p-2 align-items-center justify-content-center ease" href=""><i class="fas fa-bars"></i>&ensp;All Categories</a>
             </div>
             <div class="col">
               <ul class="list-inline mb-0 d-flex justify-content-between align-items-stretch">
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Frozen<br/>Poultry</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Frozen<br/>Seafood</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Beff &<br/>Veal</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Frozen<br/>Potato</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Frozen Veg<br/>& Potato</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Dairy</a></li>
-                <li class="list-inline-item m-0"><a class="py-3 px-4" href="">Condiments</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Frozen<br/>Poultry</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Frozen<br/>Seafood</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Beef &<br/>Veal</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Lamb &<br/>Muton</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Frozen<br/>Potato</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Frozen Veg<br/>& Potato</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Dairy</a></li>
+                <li class="list-inline-item m-0"><a class="py-3 px-3 ease" href="">Condiments</a></li>
               </ul>
             </div>
           </div>
@@ -128,27 +130,538 @@
     <section id="top-products" class="mb-3">
       <div class="container">
         <div class="row">
-          <div class="col category d-flex mr-2" style="background-image: url(src/images/meats.jpeg)">
-            <div class="p-2">
-              <button class="btn btn-outline-light btn-lg">Meat</button>
+          <div class="col-lg-4 col-sm-12 pl-0 pr-2">
+            <a href="" class="category d-flex ease" style="background-image: url(src/images/meats.jpeg)">
+              <div class="ease"><span class="ease">MEAT</span></div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-12 px-2">
+            <a href="" class="category d-flex ease" style="background-image: url(src/images/poultry.jpeg)">
+              <div class="ease"><span class="ease">POULTRY</span></div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-12 pl-2 pr-0">
+            <a href="" class="category d-flex ease" style="background-image: url(src/images/rices.jpeg)">
+              <div class="ease"><span class="ease">RICES</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GREAT DEALS -->
+    <section id="great-deals" class="mb-3">
+      <div class="container px-0">
+        <div class="card box">
+          <div class="card-header">
+            <h3>Great Deals</h3>
+          </div>
+
+          <div class="card-body">
+            <ul id="deals" class="cs-hidden">
+              <li>
+                <div class="card text-center deal-item ease">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <div class="card-body">
+                    <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                    <p class="stars">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </p>
+                    <p class="price">34.840 KWD</p>
+
+                    <form action="">
+                      <div class="input-group mb-2 w-50 mx-auto">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-dark"><i class="fas fa-minus fa-sm"></i></button>
+                        </div>
+                        <input type="text" class="form-control text-center border-dark" value="1" placeholder="Qty">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-dark"><i class="fas fa-plus fa-sm"></i></button>
+                        </div>
+                      </div>
+                      <div class="deal-button btn-group mx-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i>&ensp;Add to cart</button>
+                        <button class="btn btn-dark btn-sm">Detail</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card text-center deal-item ease">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <div class="card-body">
+                    <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                    <p class="stars">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p class="price">34.840 KWD</p>
+
+                    <form action="">
+                      <div class="input-group mb-2 w-50 mx-auto">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-dark"><i class="fas fa-minus fa-sm"></i></button>
+                        </div>
+                        <input type="text" class="form-control text-center border-dark" value="1" placeholder="Qty">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-dark"><i class="fas fa-plus fa-sm"></i></button>
+                        </div>
+                      </div>
+                      <div class="deal-button btn-group mx-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i>&ensp;Add to cart</button>
+                        <button class="btn btn-dark btn-sm">Detail</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card text-center deal-item ease">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <div class="card-body">
+                    <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                    <p class="stars">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </p>
+                    <p class="price">34.840 KWD</p>
+
+                    <form action="">
+                      <div class="input-group mb-2 w-50 mx-auto">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-dark"><i class="fas fa-minus fa-sm"></i></button>
+                        </div>
+                        <input type="text" class="form-control text-center border-dark" value="1" placeholder="Qty">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-dark"><i class="fas fa-plus fa-sm"></i></button>
+                        </div>
+                      </div>
+                      <div class="deal-button btn-group mx-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i>&ensp;Add to cart</button>
+                        <button class="btn btn-dark btn-sm">Detail</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card text-center deal-item ease">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <div class="card-body">
+                    <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                    <p class="stars">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p class="price">34.840 KWD</p>
+
+                    <form action="">
+                      <div class="input-group mb-2 w-50 mx-auto">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-dark"><i class="fas fa-minus fa-sm"></i></button>
+                        </div>
+                        <input type="text" class="form-control text-center border-dark" value="1" placeholder="Qty">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-dark"><i class="fas fa-plus fa-sm"></i></button>
+                        </div>
+                      </div>
+                      <div class="deal-button btn-group mx-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i>&ensp;Add to cart</button>
+                        <button class="btn btn-dark btn-sm">Detail</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card text-center deal-item ease">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <div class="card-body">
+                    <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                    <p class="stars">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p class="price">34.840 KWD</p>
+
+                    <form action="">
+                      <div class="input-group mb-2 w-50 mx-auto">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-dark"><i class="fas fa-minus fa-sm"></i></button>
+                        </div>
+                        <input type="text" class="form-control text-center border-dark" value="1" placeholder="Qty">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-dark"><i class="fas fa-plus fa-sm"></i></button>
+                        </div>
+                      </div>
+                      <div class="deal-button btn-group mx-auto">
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i>&ensp;Add to cart</button>
+                        <button class="btn btn-dark btn-sm">Detail</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFERS -->
+    <section id="special-offers" class="mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="first col-md-6 col-sm-12 d-flex mr-2 px-0">
+            <h3 class="px-4 m-0">SPECIAL OFFER</h3>
+ 
+            <div class="content d-flex align-items-center" style="background-image: url(src/images/chicken-fillet.jpeg);">
+              <span class="badge">70%</span>
+              <div class="title p-3">
+                <h5>Chicken Fillet Breakfast 450g</h5>
+                <p class="price">34.840 KWD <s>90.045 KWD</s></p>
+                <button class="btn btn-primary btn-sm">ORDER NOW&ensp;<i class="fas fa-caret-right"></i></button>
+              </div>
+            </div>
+
+            <div class="countdown d-flex justify-content-center align-items-center">
+              <p class="px-3 py-2 d-block">4 DAY&emsp;5 HRS&emsp;24 MIN&emsp;53 SEC</p>
             </div>
           </div>
-          <div class="col category d-flex mx-2" style="background-image: url(src/images/poultry.jpeg)">
-            <div class="p-2">
-              <button class="btn btn-outline-light btn-lg">Poultry</button>
-            </div>
+
+          <div class="offer col mx-2 px-0 d-flex" style="background-image: url(src/images/meats.jpeg);">
+            <a href="" class="d-flex w-100 ease">
+              <span class="badge">30%</span>
+              <h5>Fresh Meats 1.5KG</h5>
+              <p class="price-orange">16.643 KWD</p>
+              <button class="btn btn-secondary btn-lg">Order Now</button>
+            </a>
           </div>
-          <div class="col category d-flex ml-2" style="background-image: url(src/images/rices.jpeg)">
-            <div class="p-2">
-              <button class="btn btn-outline-light btn-lg">Rices</button>
+
+          <div class="offer col ml-2 px-0 d-flex" style="background-image: url(src/images/rices.jpeg);">
+            <a href="" class="d-flex w-100 ease">
+              <span class="badge">20%</span>
+              <h5>Rices 10KG</h5>
+              <p class="price-orange">34.654 KWD</p>
+              <button class="btn btn-secondary btn-lg">Order Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEATS -->
+    <section id="meats" class="mb-3">
+      <div class="container px-0">
+        <div class="card box">
+          <div class="card-header d-flex align-items-center">
+            <h3 class="mr-auto">Meats & Veal</h3>
+            <button class="btn btn-primary btn-sm">View all</button>
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/fresh-beef.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Fresh Meat Beef Ground 3.5KG</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">9.625 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/fresh-beef.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Fresh Meat Beef Ground 3.5KG</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">9.625 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/fresh-beef.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Fresh Meat Beef Ground 3.5KG</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">9.625 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/fresh-beef.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Fresh Meat Beef Ground 3.5KG</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">9.625 KWD</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- POULTRY -->
+    <section id="poultry" class="mb-3">
+      <div class="container px-0">
+        <div class="card box">
+          <div class="card-header d-flex align-items-center">
+            <h3 class="mr-auto">Poultry</h3>
+            <button class="btn btn-primary btn-sm">View all</button>
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">34.840 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">34.840 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">34.840 KWD</p>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card border-0">
+                  <img src="src/images/chicken-fillet.jpeg" alt="" class="card-img">
+                  <h5><a href="" class="slink ease">Chicken Fillet Breakfast 450g</a></h5>
+                  <p class="stars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p class="price">34.840 KWD</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICES -->
+    <section id="rices" class="mb-3">
+      <div class="container px-0">
+        <div class="card box">
+          <div class="card-header d-flex align-items-center">
+            <h3 class="mr-auto">Rices</h3>
+            <button class="btn btn-primary btn-sm">View all</button>
+          </div>
+
+          <div class="card-body">
+            <!-- content goes here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER -->
+    <section id="other" class="mb-3">
+      <div class="container px-0">
+        <div class="row">
+
+          <div class="col pr-2">
+            <div class="card box">
+              <div class="card-header">
+                <h5>Recommended</h5>
+              </div>
+
+              <div class="card-body">
+                <!-- content goes here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col px-2">
+            <div class="card box">
+              <div class="card-header">
+                <h5>Top Rated</h5>
+              </div>
+
+              <div class="card-body">
+                <!-- content goes here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col pl-2">
+            <div class="card box">
+              <div class="card-header">
+                <h5>New Sale</h5>
+              </div>
+
+              <div class="card-body">
+                <!-- content goes here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video">
+      
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <section id="subscribe">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col pl-0 d-flex align-items-center text-light">
+              <h3>Sign Up Free for Update Product<br/>
+              <span class="text-primary">And get Off 5%</span></h3>
+            </div>
+            <div class="col pr-0 d-flex align-items-center justify-content-end">
+              <form action="" class="form-inline subscribe w-100">
+                <div class="input-group input-group-lg w-100">
+                  <input type="text" class="form-control" placeholder="Enter your email">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="links">
+        <div class="container py-5">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="src/images/logo-footer.png" alt="Talabia Food" class="footer-logo mb-2">
+              <p class="footer-desc">
+                Talabia is lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga possimus animi quod facilis autem inventore cupiditate assumenda, aperiam non minima culpa aut optio officiis dicta vel et odit ratione quisquam.
+              </p>
+            </div>
+
+            <div class="col offset-md-1">
+              <h5>Contact Information</h5>
+              <ul class="list-unstyled fa-ul ml-4">
+                <li><span class="fa-li"><i class="fas fa-envelope fa-lg" data-fa-transform="shrink-5" data-fa-mask="fas fa-circle"></i></span>&ensp;Talabia@contact.com</li>
+                <li><span class="fa-li"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></span>&ensp;Call (062) 876 376</li>
+                <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-lg" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></span>&ensp;283 Main Street,<br>No. 23, Jakarta</li>
+              </ul>
+            </div>
+            <div class="col pl-5">
+              <h5>Information</h5>
+              <ul class="list-unstyled">
+                <li><a href="" class="ease">About Us</a></li>
+                <li><a href="" class="ease">Term & Conditions</a></li>
+                <li><a href="" class="ease">FAQ</a></li>
+                <li><a href="" class="ease">Service</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5>Working Day</h5>
+              <p>Mon - Fri, 08.00 - 17.00</p>
+              <p>Weekend, 10.00 - 16.00</p>
+
+              <a href="" class="ease"><i class="fab fa-facebook-f fa-2x" data-fa-transform="shrink-5" data-fa-mask="fas fa-circle"></i></a>
+              <a href="" class="ease"><i class="fab fa-instagram fa-2x" data-fa-transform="shrink-5" data-fa-mask="fas fa-circle"></i></a>
+              <a href="" class="ease"><i class="fab fa-twitter fa-2x" data-fa-transform="shrink-5" data-fa-mask="fas fa-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="copyright" class="d-flex align-items-center justify-content-center py-4">
+        <p>Copyright 2018 Talabia. All Rights Reserved</p>
+      </section>
+    </footer>
+
     <!-- JAVASCRIPT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="src/js/lightslider.js"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>
